@@ -1,0 +1,18 @@
+{
+    "name": "autive/lease-boot-button",
+    "description": "A plugin to add the leaseboot.com button to a website.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0+",
+    "autoload": {
+        "psr-4": {
+            "Autive\\LeaseBootButton\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Autive",
+            "email": "info@autive.nl"
+        }
+    ],
+    "require": {}
+}
