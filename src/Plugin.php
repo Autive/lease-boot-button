@@ -53,7 +53,7 @@ class Plugin
 		$version = Cache::get('version');
 		$plugin_version = Cache::get('plugin-version');
 
-		if ($plugin_version !== 'asdqew') {
+		if ($plugin_version !== LEASE_BOOT_BUTTON_VERSION ) {
 			add_action(
 				'admin_notices',
 				function () {
