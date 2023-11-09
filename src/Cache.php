@@ -6,7 +6,7 @@ class Cache {
 
 	// The following options are hard coded and can be later on changed to be dynamic
 	const percentage = 8; // Percentage
-	const duration = 180; // Months
+	const duration   = 180; // Months
 	// End of hard coded options
 
 	private string $version = '1';
@@ -25,7 +25,6 @@ class Cache {
 				self::check();
 				return get_option( 'lease-boot-cache-' . $option, false );
 		}
-
 	}
 
 	public static function check(): void {
@@ -45,5 +44,4 @@ class Cache {
 		update_option( 'lease-boot-cache-version', 1 );
 		update_option( 'lease-boot-cache-plugin-version', '1.0.0' );
 	}
-
 }

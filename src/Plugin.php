@@ -5,6 +5,7 @@ namespace Autive\LeaseBootButton;
 class Plugin {
 
 	public function __construct() {
+		$this->load_files();
 		$this->load_plugin_text_domain();
 		new Settings();
 
@@ -13,7 +14,7 @@ class Plugin {
 		}
 
 		if ( ! get_option( 'lease-boot-general-deactivate-style', false ) ) {
-            Styling::add();
+			Styling::add();
 		}
 
 		new Shortcode();
@@ -21,15 +22,17 @@ class Plugin {
 		if ( get_option( 'lease-boot-dynamic-active', false ) ) {
 			new AJAX();
 		}
+	}
 
-		// Add settings
-		// add cache settings
-
-		// Shortcode
-		// PHP function echo
-		// PHP functions to get price / url
-		// Ajax update price
-		// Ajax hook to get price
+	public function load_files(): void {
+		require_once trailingslashit( __DIR__ ) . 'Styling.php';
+		require_once trailingslashit( __DIR__ ) . 'Price.php';
+		require_once trailingslashit( __DIR__ ) . 'Cache.php';
+		require_once trailingslashit( __DIR__ ) . 'Shortcode.php';
+		require_once trailingslashit( __DIR__ ) . 'Settings.php';
+		require_once trailingslashit( __DIR__ ) . 'AJAX.php';
+		require_once trailingslashit( __DIR__ ) . 'Button.php';
+		require_once trailingslashit( __DIR__ ) . 'Plugin.php';
 	}
 
 	public function load_plugin_text_domain(): void {
@@ -40,6 +43,4 @@ class Plugin {
 			'/languages'
 		);
 	}
-
-
 }

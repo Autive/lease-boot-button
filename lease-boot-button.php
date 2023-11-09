@@ -31,12 +31,8 @@ if (!defined('WPINC')) {
 }
 
 try {
-	if (is_readable(trailingslashit(__DIR__) . '/vendor/autoload.php')) {
-		require_once trailingslashit(__DIR__) . '/vendor/autoload.php';
-	}
-
+	require_once trailingslashit(__DIR__) . 'src/Plugin.php';
 	new Plugin();
-
 } catch (Exception $exception) {
 	error_log( print_r( [
 		'plugin' => 'lease-boot-button',

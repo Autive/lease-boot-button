@@ -1,18 +1,28 @@
 {
     "name": "autive/lease-boot-button",
-    "description": "A plugin to add the leaseboot.com button to a website.",
+    "description": "A plugin for Leaseboot.com button",
     "type": "wordpress-plugin",
-    "license": "GPL-2.0+",
-    "autoload": {
-        "psr-4": {
-            "Autive\\LeaseBootButton\\": "src/"
-        }
-    },
     "authors": [
         {
-            "name": "Autive",
+            "name": "Augus",
             "email": "info@autive.nl"
         }
     ],
-    "require": {}
+    "scripts": {
+        "lint": [
+            "phpcs --standard=WordPress src"
+        ],
+        "lint-fix": [
+            "phpcbf --standard=WordPress src"
+        ]
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7",
+        "wp-coding-standards/wpcs": "^3.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
 }
