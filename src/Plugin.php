@@ -16,6 +16,12 @@ class Plugin {
             Styling::add();
 		}
 
+		new Shortcode();
+
+		if ( get_option( 'lease-boot-dynamic-active', false ) ) {
+			new AJAX();
+		}
+
 		// Add settings
 		// add cache settings
 
