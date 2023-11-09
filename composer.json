@@ -24,7 +24,7 @@
             "cp index.php build/index.php",
             "cp lease-boot-button.php build/lease-boot-button.php",
             "cp README.md build/README.md",
-            "zip -r lease-boot-button.zip build",
+            "cd build; zip -r ../lease-boot-button.zip *",
             "rm -rf build"
         ]
     },
