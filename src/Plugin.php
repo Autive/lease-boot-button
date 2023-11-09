@@ -43,7 +43,7 @@ class Plugin
         load_plugin_textdomain(
             'autive-lbb',
             false,
-            '/languages'
+	        dirname( plugin_basename( __FILE__ ) ) . '/../languages'
         );
     }
 }

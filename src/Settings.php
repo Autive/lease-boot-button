@@ -150,14 +150,11 @@ class Settings
             <th scope="row"><?php _e('Price text', 'autive-lbb'); ?></th>
             <td>
                 <textarea name="lease-boot-general-price-text" id="lease-boot-general-price-text" cols="30"
-                            rows="5">
-                            <?php
-                            echo get_option(
+                            rows="5"> <?php echo get_option(
                                 'lease-boot-general-price-text',
                                 'Financiering vanaf {price} per maand'
                             );
-                            ?>
-                                    </textarea>
+                            ?></textarea>
             </td>
         </tr>
         <tr>

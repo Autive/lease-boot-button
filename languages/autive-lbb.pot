@@ -1,0 +1,347 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Lease Boot Button plugin\n"
+"POT-Creation-Date: 2023-11-09 21:40+0100\n"
+"PO-Revision-Date: 2023-11-09 21:40+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: lease-boot-button.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: src/AJAX.php:82
+msgid ""
+"You need to set the Dynamic container in the Leaseboot plugin settings to "
+"make it work dynamically."
+msgstr ""
+
+#: src/Settings.php:69
+msgid "Leaseboot Button Settings"
+msgstr ""
+
+#: src/Settings.php:122
+msgid "Here you can change the general settings."
+msgstr ""
+
+#: src/Settings.php:128
+msgid "Example background"
+msgstr ""
+
+#: src/Settings.php:136
+msgid "Example price"
+msgstr ""
+
+#: src/Settings.php:143
+msgid "Button text"
+msgstr ""
+
+#: src/Settings.php:150
+msgid "Price text"
+msgstr ""
+
+#: src/Settings.php:168
+msgid ""
+"You can use {price} for the monthly price and {amount} for the total cost of "
+"the boat."
+msgstr ""
+
+#: src/Settings.php:176
+msgid "Deactivate plugin styling"
+msgstr ""
+
+#: src/Settings.php:193
+msgid ""
+"If you decide to deactivate the button styling make sure your theme does add "
+"the correct styling."
+msgstr ""
+
+#: src/Settings.php:211
+msgid "Here you can change the styling of the button."
+msgstr ""
+
+#: src/Settings.php:217
+msgid "Button classes"
+msgstr ""
+
+#: src/Settings.php:224
+msgid "Button alignment"
+msgstr ""
+
+#: src/Settings.php:235 src/Settings.php:387
+msgid "Left"
+msgstr ""
+
+#: src/Settings.php:245 src/Settings.php:397
+msgid "Center"
+msgstr ""
+
+#: src/Settings.php:255 src/Settings.php:407
+msgid "Right"
+msgstr ""
+
+#: src/Settings.php:261
+msgid "Button background color"
+msgstr ""
+
+#: src/Settings.php:269
+msgid "Button font color"
+msgstr ""
+
+#: src/Settings.php:277
+msgid "Button font size"
+msgstr ""
+
+#: src/Settings.php:284
+msgid "Button font weight"
+msgstr ""
+
+#: src/Settings.php:291
+msgid "Button border color"
+msgstr ""
+
+#: src/Settings.php:299
+msgid "Button border thickness"
+msgstr ""
+
+#: src/Settings.php:306
+msgid "Button border radius"
+msgstr ""
+
+#: src/Settings.php:313
+msgid "Button padding x"
+msgstr ""
+
+#: src/Settings.php:320
+msgid "Button padding y"
+msgstr ""
+
+#: src/Settings.php:337
+msgid ""
+"Here you can change the styling of the text. If you decide to not activate "
+"the styling make sure your theme does style the text."
+msgstr ""
+
+#: src/Settings.php:343
+msgid "Deactivate text"
+msgstr ""
+
+#: src/Settings.php:360
+msgid "If you disable the text the monthly price is not shown anymore."
+msgstr ""
+
+#: src/Settings.php:369
+msgid "Text classes"
+msgstr ""
+
+#: src/Settings.php:376
+msgid "Text alignment"
+msgstr ""
+
+#: src/Settings.php:413
+msgid "Text color"
+msgstr ""
+
+#: src/Settings.php:421
+msgid "Text font size"
+msgstr ""
+
+#: src/Settings.php:428
+msgid "Text font weight"
+msgstr ""
+
+#: src/Settings.php:435
+msgid "Text padding x"
+msgstr ""
+
+#: src/Settings.php:442
+msgid "Text padding y"
+msgstr ""
+
+#: src/Settings.php:456
+msgid "Here you can change the dynamic settings."
+msgstr ""
+
+#: src/Settings.php:458
+msgid "Activate dynamic pricing"
+msgstr ""
+
+#: src/Settings.php:472
+msgid "Container"
+msgstr ""
+
+#: src/Settings.php:483
+msgid ""
+"Make sure to add a # or . in this field to be able to target either an id or "
+"class."
+msgstr ""
+
+#: src/Settings.php:491
+msgid ""
+"We assume you use Dutch currency format (1.000,00) and will strip any non "
+"numerical content."
+msgstr ""
+
+#: src/Settings.php:506
+msgid "Shortcode"
+msgstr ""
+
+#: src/Settings.php:511
+msgid ""
+"You can use the shortcode [lease-boot-button] to add the button to your "
+"website with the following attributes:"
+msgstr ""
+
+#: src/Settings.php:518
+msgid "The price of the boat"
+msgstr ""
+
+#: src/Settings.php:519
+msgid "The text of the button (optional)"
+msgstr ""
+
+#: src/Settings.php:520
+msgid "The text of the price (optional)"
+msgstr ""
+
+#: src/Settings.php:552
+msgid "PHP"
+msgstr ""
+
+#: src/Settings.php:557
+msgid "You can use the following PHP code to get an instance of the button:"
+msgstr ""
+
+#: src/Settings.php:566
+msgid "You can use the following attributes in order to change the button:"
+msgstr ""
+
+#: src/Settings.php:570
+msgid "$price (int) the total price of the object, mandatory."
+msgstr ""
+
+#: src/Settings.php:571
+msgid "$text (string) the text of the price, optional."
+msgstr ""
+
+#: src/Settings.php:572
+msgid "$button_txt (string) the text of the button, optional."
+msgstr ""
+
+#: src/Settings.php:573
+msgid "$button_classes (string) the classes of the button, optional."
+msgstr ""
+
+#: src/Settings.php:574
+msgid "$text_deactivate (bool) deactivate the text, optional."
+msgstr ""
+
+#: src/Settings.php:575
+msgid "$text_classes (string) the classes of the text container, optional."
+msgstr ""
+
+#: src/Settings.php:579
+msgid ""
+"You need to add variables in order, so if you only want to disable the text "
+"use the following."
+msgstr ""
+
+#: src/Settings.php:588
+msgid "PHP - HTML"
+msgstr ""
+
+#: src/Settings.php:593
+msgid "Then you can use the following function to render the html:"
+msgstr ""
+
+#: src/Settings.php:604
+msgid "PHP - price"
+msgstr ""
+
+#: src/Settings.php:609
+msgid "You can use the following PHP code to only get the monthly price:"
+msgstr ""
+
+#: src/Settings.php:620
+msgid "PHP - url"
+msgstr ""
+
+#: src/Settings.php:625
+msgid "You can use the following PHP code to only get the url:"
+msgstr ""
+
+#: src/Settings.php:636
+msgid "Dynamic pricing"
+msgstr ""
+
+#: src/Settings.php:638
+msgid "You can use AJAX to make the button dynamic:"
+msgstr ""
+
+#: src/Settings.php:640
+msgid "To do this make sure to enable Dynamic pricing on the Dynamic tab,"
+msgstr ""
+
+#: src/Settings.php:644
+msgid ""
+"This will add Javascript to your website which will listen to changes to the "
+"price inside the given container."
+msgstr ""
+
+#: src/Settings.php:651
+msgid ""
+"When the price changes the button will be updated with the correct price, "
+"amount and url."
+msgstr ""
+
+#: src/Settings.php:678
+msgid "General"
+msgstr ""
+
+#: src/Settings.php:679
+msgid "Button styling"
+msgstr ""
+
+#: src/Settings.php:680
+msgid "Text styling"
+msgstr ""
+
+#: src/Settings.php:681
+msgid "Dynamic"
+msgstr ""
+
+#: src/Settings.php:682
+msgid "How to"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Lease Boot Button plugin"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.leaseboot.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A plugin to add the leaseboot.com button to a website."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Autive"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://autive.nl"
+msgstr ""

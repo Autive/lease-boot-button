@@ -1,0 +1,372 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lease Boot Button plugin\n"
+"POT-Creation-Date: 2023-11-09 21:40+0100\n"
+"PO-Revision-Date: 2023-11-09 21:47+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: lease-boot-button.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: src/AJAX.php:82
+msgid ""
+"You need to set the Dynamic container in the Leaseboot plugin settings to "
+"make it work dynamically."
+msgstr ""
+"U moet de Dynamische container instellen in de instellingen van de Leaseboot "
+"plugin om het dynamisch te laten werken."
+
+#: src/Settings.php:69
+msgid "Leaseboot Button Settings"
+msgstr "Leaseboot instellingen"
+
+#: src/Settings.php:122
+msgid "Here you can change the general settings."
+msgstr "Hier kunt u de algemene instellingen wijzigen."
+
+#: src/Settings.php:128
+msgid "Example background"
+msgstr "Voorbeeld achtergrond"
+
+#: src/Settings.php:136
+msgid "Example price"
+msgstr "Voorbeeld prijs"
+
+#: src/Settings.php:143
+msgid "Button text"
+msgstr "Knop tekst"
+
+#: src/Settings.php:150
+msgid "Price text"
+msgstr "Prijstekst"
+
+#: src/Settings.php:168
+msgid ""
+"You can use {price} for the monthly price and {amount} for the total cost of "
+"the boat."
+msgstr ""
+"U kunt {price} gebruiken voor de maandelijkse prijs en {amount} voor de "
+"totale kosten van de boot."
+
+#: src/Settings.php:176
+msgid "Deactivate plugin styling"
+msgstr "Plugin-styling deactiveren"
+
+#: src/Settings.php:193
+msgid ""
+"If you decide to deactivate the button styling make sure your theme does add "
+"the correct styling."
+msgstr ""
+"Als u besluit om de styling van de knop uit te schakelen, zorg er dan voor "
+"dat uw thema de juiste styling toevoegt."
+
+#: src/Settings.php:211
+msgid "Here you can change the styling of the button."
+msgstr "Hier kunt u de vormgeving van de knop wijzigen."
+
+#: src/Settings.php:217
+msgid "Button classes"
+msgstr "Knop classes"
+
+#: src/Settings.php:224
+msgid "Button alignment"
+msgstr "Knoppen uitlijning"
+
+#: src/Settings.php:235 src/Settings.php:387
+msgid "Left"
+msgstr "Links"
+
+#: src/Settings.php:245 src/Settings.php:397
+msgid "Center"
+msgstr "Midden"
+
+#: src/Settings.php:255 src/Settings.php:407
+msgid "Right"
+msgstr "Rechts"
+
+#: src/Settings.php:261
+msgid "Button background color"
+msgstr "Knop achtergrondkleur"
+
+#: src/Settings.php:269
+msgid "Button font color"
+msgstr "Knop lettertype kleur"
+
+#: src/Settings.php:277
+msgid "Button font size"
+msgstr "﻿Knop lettertype grote"
+
+#: src/Settings.php:284
+msgid "Button font weight"
+msgstr "Knop lettertype dikte"
+
+#: src/Settings.php:291
+msgid "Button border color"
+msgstr "Knop randkleur"
+
+#: src/Settings.php:299
+msgid "Button border thickness"
+msgstr "Knop randdikte"
+
+#: src/Settings.php:306
+msgid "Button border radius"
+msgstr "Knop rand ronding"
+
+#: src/Settings.php:313
+msgid "Button padding x"
+msgstr "Knop padding x"
+
+#: src/Settings.php:320
+msgid "Button padding y"
+msgstr "Knop padding y"
+
+#: src/Settings.php:337
+msgid ""
+"Here you can change the styling of the text. If you decide to not activate "
+"the styling make sure your theme does style the text."
+msgstr ""
+"Hier kunt u de opmaak van de tekst wijzigen. Als u besluit de opmaak niet te "
+"activeren, zorg er dan voor dat uw thema de tekst wel opmaakt."
+
+#: src/Settings.php:343
+msgid "Deactivate text"
+msgstr "Tekst deactiveren"
+
+#: src/Settings.php:360
+msgid "If you disable the text the monthly price is not shown anymore."
+msgstr "Als u de tekst uitschakelt, wordt de maandprijs niet meer weergegeven."
+
+#: src/Settings.php:369
+msgid "Text classes"
+msgstr "Tekst classes"
+
+#: src/Settings.php:376
+msgid "Text alignment"
+msgstr "Tekstuitlijning"
+
+#: src/Settings.php:413
+msgid "Text color"
+msgstr "Tekstkleur"
+
+#: src/Settings.php:421
+msgid "Text font size"
+msgstr "Tekstgrootte"
+
+#: src/Settings.php:428
+msgid "Text font weight"
+msgstr "Tekstdikte"
+
+#: src/Settings.php:435
+msgid "Text padding x"
+msgstr "Tekst padding x"
+
+#: src/Settings.php:442
+msgid "Text padding y"
+msgstr "Tekst padding y"
+
+#: src/Settings.php:456
+msgid "Here you can change the dynamic settings."
+msgstr "Hier kunt u de dynamische instellingen wijzigen."
+
+#: src/Settings.php:458
+msgid "Activate dynamic pricing"
+msgstr "Dynamische prijzen activeren"
+
+#: src/Settings.php:472
+msgid "Container"
+msgstr "Container"
+
+#: src/Settings.php:483
+msgid ""
+"Make sure to add a # or . in this field to be able to target either an id or "
+"class."
+msgstr ""
+"Zorg ervoor dat u een # of . in dit veld toevoegt om een id of class te "
+"kunnen targeten."
+
+#: src/Settings.php:491
+msgid ""
+"We assume you use Dutch currency format (1.000,00) and will strip any non "
+"numerical content."
+msgstr ""
+"Wij gaan ervan uit dat u het Nederlandse valutaformaat (1.000,00) gebruikt "
+"en alle niet numerieke inhoud verwijdert."
+
+#: src/Settings.php:506
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: src/Settings.php:511
+msgid ""
+"You can use the shortcode [lease-boot-button] to add the button to your "
+"website with the following attributes:"
+msgstr ""
+"U kunt de shortcode [lease-boot-button] gebruiken om de knop aan uw website "
+"toe te voegen met de volgende attributen:"
+
+#: src/Settings.php:518
+msgid "The price of the boat"
+msgstr "De prijs van de boot"
+
+#: src/Settings.php:519
+msgid "The text of the button (optional)"
+msgstr "De tekst van de knop (optioneel)"
+
+#: src/Settings.php:520
+msgid "The text of the price (optional)"
+msgstr "De tekst van de prijs (optioneel)"
+
+#: src/Settings.php:552
+msgid "PHP"
+msgstr "PHP"
+
+#: src/Settings.php:557
+msgid "You can use the following PHP code to get an instance of the button:"
+msgstr ""
+"U kunt de volgende PHP-code gebruiken om een instantie van de knop te "
+"krijgen:"
+
+#: src/Settings.php:566
+msgid "You can use the following attributes in order to change the button:"
+msgstr "U kunt de volgende attributen gebruiken om de knop te wijzigen:"
+
+#: src/Settings.php:570
+msgid "$price (int) the total price of the object, mandatory."
+msgstr "$price (int) de totale prijs van het object, verplicht."
+
+#: src/Settings.php:571
+msgid "$text (string) the text of the price, optional."
+msgstr "$text (tekenreeks) de tekst van de prijs, optioneel."
+
+#: src/Settings.php:572
+msgid "$button_txt (string) the text of the button, optional."
+msgstr "$button_txt (string) de tekst van de knop, optioneel."
+
+#: src/Settings.php:573
+msgid "$button_classes (string) the classes of the button, optional."
+msgstr "$button_classes (string) de classes van de knop, optioneel."
+
+#: src/Settings.php:574
+msgid "$text_deactivate (bool) deactivate the text, optional."
+msgstr "$text_deactivate (bool) deactiveert de tekst, optioneel."
+
+#: src/Settings.php:575
+msgid "$text_classes (string) the classes of the text container, optional."
+msgstr "$text_classes (string) de classes van de tekstcontainer, optioneel."
+
+#: src/Settings.php:579
+msgid ""
+"You need to add variables in order, so if you only want to disable the text "
+"use the following."
+msgstr ""
+"U moet variabelen in volgorde toevoegen, dus als u alleen de tekst wilt "
+"uitschakelen, gebruikt u het volgende."
+
+#: src/Settings.php:588
+msgid "PHP - HTML"
+msgstr "PHP - HTML"
+
+#: src/Settings.php:593
+msgid "Then you can use the following function to render the html:"
+msgstr ""
+"Vervolgens kunt u de volgende functie gebruiken om de html te renderen:"
+
+#: src/Settings.php:604
+msgid "PHP - price"
+msgstr "PHP - prijs"
+
+#: src/Settings.php:609
+msgid "You can use the following PHP code to only get the monthly price:"
+msgstr ""
+"U kunt de volgende PHP-code gebruiken om alleen de maandprijs te krijgen:"
+
+#: src/Settings.php:620
+msgid "PHP - url"
+msgstr "PHP - url"
+
+#: src/Settings.php:625
+msgid "You can use the following PHP code to only get the url:"
+msgstr "U kunt de volgende PHP-code gebruiken om alleen de url te krijgen:"
+
+#: src/Settings.php:636
+msgid "Dynamic pricing"
+msgstr "Dynamische prijzen"
+
+#: src/Settings.php:638
+msgid "You can use AJAX to make the button dynamic:"
+msgstr "U kunt AJAX gebruiken om de knop dynamisch te maken:"
+
+#: src/Settings.php:640
+msgid "To do this make sure to enable Dynamic pricing on the Dynamic tab,"
+msgstr ""
+"Om dit te doen, moet u Dynamische prijzen inschakelen op het tabblad "
+"Dynamisch,"
+
+#: src/Settings.php:644
+msgid ""
+"This will add Javascript to your website which will listen to changes to the "
+"price inside the given container."
+msgstr ""
+"Hiermee voegt u Javascript aan uw website toe dat luistert naar wijzigingen "
+"in de prijs binnen de opgegeven container."
+
+#: src/Settings.php:651
+msgid ""
+"When the price changes the button will be updated with the correct price, "
+"amount and url."
+msgstr ""
+"Als de prijs verandert, wordt de knop bijgewerkt met de juiste prijs, het "
+"juiste bedrag en de juiste url."
+
+#: src/Settings.php:678
+msgid "General"
+msgstr "Algemeen"
+
+#: src/Settings.php:679
+msgid "Button styling"
+msgstr "Knopstyling"
+
+#: src/Settings.php:680
+msgid "Text styling"
+msgstr "Tekst opmaak"
+
+#: src/Settings.php:681
+msgid "Dynamic"
+msgstr "Dynamisch"
+
+#: src/Settings.php:682
+msgid "How to"
+msgstr "How to"
+
+#. Plugin Name of the plugin/theme
+msgid "Lease Boot Button plugin"
+msgstr "Lease opstart knop plugin"
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.leaseboot.com"
+msgstr "https://www.leaseboot.com"
+
+#. Description of the plugin/theme
+msgid "A plugin to add the leaseboot.com button to a website."
+msgstr "Een plugin om de leaseboot.com knop aan een website toe te voegen."
+
+#. Author of the plugin/theme
+msgid "Autive"
+msgstr "Autive"
+
+#. Author URI of the plugin/theme
+msgid "https://autive.nl"
+msgstr "https://autive.nl"
