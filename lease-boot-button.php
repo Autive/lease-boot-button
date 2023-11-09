@@ -15,6 +15,8 @@
  * Plugin URI:        https://www.leaseboot.com
  * Description:       A plugin to add the leaseboot.com button to a website.
  * Version:           1.0.0
+ * Requires at least: 5.8
+ * Requires PHP:      8.0
  * Author:            Autive
  * Author URI:        https://autive.nl
  * License:           GPL-2.0+
@@ -29,6 +31,8 @@ use Autive\LeaseBootButton\Plugin;
 if (!defined('WPINC')) {
 	die;
 }
+
+const LEASE_BOOT_BUTTON_VERSION = '1.0.0';
 
 try {
 	require_once trailingslashit(__DIR__) . 'src/Plugin.php';

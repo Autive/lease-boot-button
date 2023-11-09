@@ -1,1 +1,4 @@
 /vendor/
+/build/
+lease-boot-button.zip
+.DS_Store

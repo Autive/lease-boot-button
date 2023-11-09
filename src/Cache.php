@@ -13,7 +13,6 @@ class Cache
 
     private string $plugin_version = '1.0.0';
 
-
     public static function get($option)
     {
 
@@ -41,10 +40,13 @@ class Cache
 
     public static function update(): void
     {
+		$json = @file_get_contents('https://bootfinancieringen.nl/wp-content/plugins/bootfinancieringen/leaseboot/info.json');
+		$data = json_decode($json, true);
+
         update_option('lease-boot-cache-last-update', time());
 
         // TODO: Update the cache
-        update_option('lease-boot-cache-version', 1);
-        update_option('lease-boot-cache-plugin-version', '1.0.0');
+        update_option('lease-boot-cache-version', $data['version'] ?? '1.0.0');
+        update_option('lease-boot-cache-plugin-version', $data['plugin-version'] ?? '1.0.0');
     }
 }

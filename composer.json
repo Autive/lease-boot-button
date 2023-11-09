@@ -14,6 +14,18 @@
         ],
         "lint-fix": [
             "phpcbf --standard=./phpcs.xml src"
+        ],
+        "make-zip": [
+            "mkdir build",
+            "cp -r assets build/assets",
+            "cp -r languages build/languages",
+            "cp -r src build/src",
+            "cp gpl-3.0.txt build/gpl-3.0.txt",
+            "cp index.php build/index.php",
+            "cp lease-boot-button.php build/lease-boot-button.php",
+            "cp README.md build/README.md",
+            "zip -r lease-boot-button.zip build",
+            "rm -rf build"
         ]
     },
     "require-dev": {
