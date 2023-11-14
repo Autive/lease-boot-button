@@ -88,8 +88,7 @@ class Button
      */
     public function get_url(): string
     {
-        // @TODO: replace with production url
-        return 'https://staging.leaseboot.com/leasecalculator/?amount=' . $this->amount;
+        return 'https://www.leaseboot.com/calculator/?amount=' . $this->amount;
     }
 
     /**

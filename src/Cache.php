@@ -41,12 +41,11 @@ class Cache
     public static function update(): void
     {
 		$json = @file_get_contents('https://bootfinancieringen.nl/wp-content/plugins/bootfinancieringen/leaseboot/info.json');
-		$data = json_decode($json, true);
-
-        update_option('lease-boot-cache-last-update', time());
-
-        // TODO: Update the cache
-        update_option('lease-boot-cache-version', $data['version'] ?? '1.0.0');
-        update_option('lease-boot-cache-plugin-version', $data['plugin-version'] ?? '1.0.0');
+		if ( $json ) {
+			$data = json_decode($json, true);
+			update_option('lease-boot-cache-last-update', time());
+			update_option('lease-boot-cache-version', $data['version'] ?? '1.0.0');
+			update_option('lease-boot-cache-plugin-version', $data['plugin-version'] ?? '1.0.0');
+		}
     }
 }
