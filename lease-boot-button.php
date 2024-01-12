@@ -3,7 +3,7 @@
  * Autive - Lease Boot Button plugin
  *
  * @package   Autive_LeaseBootButton
- * @version   1.0.2
+ * @version   1.0.3
  * @author    Autive <info@autive.nl>
  * @license   GPL-2.0+
  * @link      https://www.autive.nl
@@ -14,7 +14,7 @@
  * Plugin Name:       Lease Boot Button plugin
  * Plugin URI:        https://www.leaseboot.com
  * Description:       A plugin to add the leaseboot.com button to a website.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 5.8
  * Requires PHP:      8.0
  * Author:            Autive
@@ -32,7 +32,7 @@ if (!defined('WPINC')) {
 	die;
 }
 
-const LEASE_BOOT_BUTTON_VERSION = '1.0.2';
+const LEASE_BOOT_BUTTON_VERSION = '1.0.3';
 
 try {
 	require_once trailingslashit(__DIR__) . 'src/Plugin.php';

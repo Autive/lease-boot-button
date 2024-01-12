@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // Create an observer instance.
         const observer = new MutationObserver(function (mutations) {
 
-            // Only update every 2.5 seconds
+            // Only update every .5 seconds
             if ( Date.now() < waitTime ) {
                 return;
             }
@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 }
             });
 
-            // Wait 2.5 seconds before updating again
-            waitTime = Date.now() + 2500;
+            // Wait .5 seconds before updating again
+            waitTime = Date.now() + 500;
         });
 
         // Pass in the target node, as well as the observer options.
