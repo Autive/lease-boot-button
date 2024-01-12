@@ -1,6 +1,7 @@
 {
     "name": "autive/lease-boot-button",
     "description": "A plugin for Leaseboot.com button",
+    "version": "1.0.2",
     "type": "wordpress-plugin",
     "authors": [
         {

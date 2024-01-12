@@ -25,6 +25,7 @@ class Settings
     public function register_settings()
     {
         // General settings
+        register_setting('lease-boot-button-general', 'lease-boot-general-dealer-tag');
         register_setting('lease-boot-button-general', 'lease-boot-general-example-bg');
         register_setting('lease-boot-button-general', 'lease-boot-general-example-price');
         register_setting('lease-boot-button-general', 'lease-boot-general-button-text');
@@ -96,14 +97,14 @@ class Settings
                 <?php endif; ?>
             </form>
             <div id="lease-boat-example-area"
-                style="background-color: 
-                <?php
+                 style="background-color:
+                 <?php
                     echo get_option(
                         'lease-boot-general-example-bg',
                         '#FFFFFF'
                     );
-                ?>
-                                            ">
+                    ?>
+                         ">
 
                 <?php ( new Button(get_option('lease-boot-general-example-price', '50000')) )->html(); ?>
             </div>
@@ -117,81 +118,104 @@ class Settings
         <?php settings_fields('lease-boot-button-general'); ?>
         <?php do_settings_sections('lease-boot-button-general'); ?>
         <p>
-        <?php
-        _e(
-            'Here you can change the general settings.',
-            'autive-lbb'
-        )
-        ?>
+            <?php
+            _e(
+                'Here you can change the general settings.',
+                'autive-lbb'
+            )
+            ?>
         </p>
+        <tr>
+            <th scope="row">
+                <?php _e('Dealer tag', 'autive-lbb'); ?>
+            </th>
+            <td>
+                <input type="text" name="lease-boot-general-dealer-tag"
+                       value="<?php echo get_option('lease-boot-general-dealer-tag', ''); ?>"/>
+                <p class="description">
+                    <?php
+                    _e(
+                        'This tag is added to the form on leaseboot.com so we are able to see the request came from you. ',
+                        'autive-lbb'
+                    )
+                    ?><br>
+                    <?php
+                    _e(
+                        'Make sure the tag is unique to your company, recognizable and does not contain any spaces.',
+                        'autive-lbb'
+                    )
+                    ?><br>
+                    <?php
+                    _e(
+                        'Example: <strong>leaseboot-com</strong>',
+                        'autive-lbb'
+                    )
+                    ?>
+
+                </p>
+            </td>
+        </tr>
         <tr>
             <th scope="row"><?php _e('Example background', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-general-example-bg"
-                        value="<?php echo get_option('lease-boot-general-example-bg', '#FFFFFF'); ?>"
-                        class="lease-boot-general-example-bg" data-default-color="#FFFFFF"/>
+                       value="<?php echo get_option('lease-boot-general-example-bg', '#FFFFFF'); ?>"
+                       class="lease-boot-general-example-bg" data-default-color="#FFFFFF"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Example price', 'autive-lbb'); ?></th>
             <td>
                 <input type="number" step="1" name="lease-boot-general-example-price"
-                        value="<?php echo get_option('lease-boot-general-example-price', '50000'); ?>"/>
+                       value="<?php echo get_option('lease-boot-general-example-price', '50000'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button text', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-general-button-text"
-                        value="<?php echo get_option('lease-boot-general-button-text', 'Financier nu!'); ?>"/>
+                       value="<?php echo get_option('lease-boot-general-button-text', 'Financier nu!'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Price text', 'autive-lbb'); ?></th>
             <td>
                 <textarea name="lease-boot-general-price-text" id="lease-boot-general-price-text" cols="30"
-                            rows="5"> <?php echo get_option(
-                                'lease-boot-general-price-text',
-                                'Financiering vanaf {price} per maand'
-                            );
-                            ?></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <small>
-                <?php
-                _e(
-                    'You can use {price} for the monthly price and {amount} for the total cost of the boat.',
-                    'autive-lbb'
-                )
-                ?>
-                        </small>
+                          rows="5">
+                    <?php echo get_option(
+                        'lease-boot-general-price-text',
+                        'Financiering vanaf {price} per maand'
+                    ); ?>
+                </textarea>
+                <p class="description">
+                    <?php
+                    _e(
+                        'You can use {price} for the monthly price and {amount} for the total cost of the boat.',
+                        'autive-lbb'
+                    )
+                    ?>
+                </p>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Deactivate plugin styling', 'autive-lbb'); ?></th>
             <td>
-                <input type="checkbox" name="lease-boot-general-deactivate-style" value="1" 
-                <?php
-                checked(
-                    1,
-                    get_option('lease-boot-general-deactivate-style', 0)
-                );
-                ?>
-                                                                                            />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <small>
-                <?php
-                _e(
-                    'If you decide to deactivate the button styling make sure your theme does add the correct styling.',
-                    'autive-lbb'
-                )
-                ?>
-                        </small>
+                <input type="checkbox" name="lease-boot-general-deactivate-style" value="1"
+                    <?php
+                    checked(
+                        1,
+                        get_option('lease-boot-general-deactivate-style', 0)
+                    );
+                    ?>
+                />
+                <p class="description">
+                    <?php
+                    _e(
+                        'If you decide to deactivate the button styling make sure your theme does add the correct styling.',
+                        'autive-lbb'
+                    )
+                    ?>
+                </p>
             </td>
         </tr>
         <?php
@@ -203,52 +227,52 @@ class Settings
         <?php settings_fields('lease-boot-button-style'); ?>
         <?php do_settings_sections('lease-boot-button-style'); ?>
         <p>
-        <?php
-        _e(
-            'Here you can change the styling of the button.',
-            'autive-lbb'
-        )
-        ?>
+            <?php
+            _e(
+                'Here you can change the styling of the button.',
+                'autive-lbb'
+            )
+            ?>
         </p>
         <tr>
             <th scope="row"><?php _e('Button classes', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-classes"
-                        value="<?php echo get_option('lease-boot-style-classes', ''); ?>"/>
+                       value="<?php echo get_option('lease-boot-style-classes', ''); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button alignment', 'autive-lbb'); ?></th>
             <td>
                 <select name="lease-boot-style-alignment">
-                    <option value="flex-start" 
-                    <?php
-                    selected(
-                        'flex-start',
-                        get_option('lease-boot-style-alignment', 'center')
-                    );
-                    ?>
-                                                >
+                    <option value="flex-start"
+                        <?php
+                        selected(
+                            'flex-start',
+                            get_option('lease-boot-style-alignment', 'center')
+                        );
+                        ?>
+                    >
                         <?php _e('Left', 'autive-lbb'); ?>
                     </option>
-                    <option value="center" 
-                    <?php
-                    selected(
-                        'center',
-                        get_option('lease-boot-style-alignment', 'center')
-                    );
-                    ?>
-                                            >
+                    <option value="center"
+                        <?php
+                        selected(
+                            'center',
+                            get_option('lease-boot-style-alignment', 'center')
+                        );
+                        ?>
+                    >
                         <?php _e('Center', 'autive-lbb'); ?>
                     </option>
-                    <option value="flex-end" 
-                    <?php
-                    selected(
-                        'flex-end',
-                        get_option('lease-boot-style-alignment', 'center')
-                    );
-                    ?>
-                                            >
+                    <option value="flex-end"
+                        <?php
+                        selected(
+                            'flex-end',
+                            get_option('lease-boot-style-alignment', 'center')
+                        );
+                        ?>
+                    >
                         <?php _e('Right', 'autive-lbb'); ?>
                     </option>
                 </select>
@@ -258,66 +282,66 @@ class Settings
             <th scope="row"><?php _e('Button background color', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-bg-color"
-                        value="<?php echo get_option('lease-boot-style-bg-color', '#FFFFFF'); ?>"
-                        class="lease-boot-style-bg-color" data-default-color="#FFFFFF"/>
+                       value="<?php echo get_option('lease-boot-style-bg-color', '#FFFFFF'); ?>"
+                       class="lease-boot-style-bg-color" data-default-color="#FFFFFF"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button font color', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-font-color"
-                        value="<?php echo get_option('lease-boot-style-font-color', '#000000'); ?>"
-                        class="lease-boot-style-text-color" data-default-color="#000000"/>
+                       value="<?php echo get_option('lease-boot-style-font-color', '#000000'); ?>"
+                       class="lease-boot-style-text-color" data-default-color="#000000"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button font size', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-font-size"
-                        value="<?php echo get_option('lease-boot-style-font-size', '1rem'); ?>"/>
+                       value="<?php echo get_option('lease-boot-style-font-size', '1rem'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button font weight', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-font-weight"
-                        value="<?php echo get_option('lease-boot-style-font-weight', '400'); ?>"/>
+                       value="<?php echo get_option('lease-boot-style-font-weight', '400'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button border color', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-border-color"
-                        value="<?php echo get_option('lease-boot-style-border-color', '#000000'); ?>"
-                        class="lease-boot-style-border-color" data-default-color="#000000"/>
+                       value="<?php echo get_option('lease-boot-style-border-color', '#000000'); ?>"
+                       class="lease-boot-style-border-color" data-default-color="#000000"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button border thickness', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-border-thickness"
-                        value="<?php echo get_option('lease-boot-style-border-thickness', '1px'); ?>"/>
+                       value="<?php echo get_option('lease-boot-style-border-thickness', '1px'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button border radius', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-border-radius"
-                        value="<?php echo get_option('lease-boot-style-border-radius', '0px'); ?>"/>
+                       value="<?php echo get_option('lease-boot-style-border-radius', '0px'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button padding x', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-padding-x"
-                        value="<?php echo get_option('lease-boot-style-padding-x', '20px'); ?>"/>
+                       value="<?php echo get_option('lease-boot-style-padding-x', '20px'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Button padding y', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-style-padding-y"
-                        value="<?php echo get_option('lease-boot-style-padding-y', '10px'); ?>"/>
+                       value="<?php echo get_option('lease-boot-style-padding-y', '10px'); ?>"/>
             </td>
         </tr>
         <?php
@@ -329,78 +353,73 @@ class Settings
         do_settings_sections('lease-boot-text-style');
         ?>
         <p>
-        <?php
-        _e(
-            'Here you can change the styling of the text. If you decide to not activate the styling make sure your theme does style the text.',
-            'autive-lbb'
-        )
-        ?>
+            <?php
+            _e(
+                'Here you can change the styling of the text. If you decide to not activate the styling make sure your theme does style the text.',
+                'autive-lbb'
+            )
+            ?>
         </p>
         <tr>
             <th scope="row"><?php _e('Deactivate text', 'autive-lbb'); ?></th>
             <td>
-                <input type="checkbox" name="lease-boot-text-deactivate" 
-                <?php
-                checked(
-                    1,
-                    get_option('lease-boot-text-deactivate', 0)
-                );
-                ?>
-                                                                            />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <small>
-                <?php
-                _e(
-                    'If you disable the text the monthly price is not shown anymore.',
-                    'autive-lbb'
-                )
-                ?>
-                        </small><br>
-
+                <input type="checkbox" name="lease-boot-text-deactivate"
+                    <?php
+                    checked(
+                        1,
+                        get_option('lease-boot-text-deactivate', 0)
+                    );
+                    ?>
+                />
+                <p class="description">
+                    <?php
+                    _e(
+                        'If you disable the text the monthly price is not shown anymore.',
+                        'autive-lbb'
+                    )
+                    ?>
+                </p>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Text classes', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-text-style-classes"
-                        value="<?php echo get_option('lease-boot-text-style-classes', ''); ?>"/>
+                       value="<?php echo get_option('lease-boot-text-style-classes', ''); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Text alignment', 'autive-lbb'); ?></th>
             <td>
                 <select name="lease-boot-text-style-alignment">
-                    <option value="left" 
-                    <?php
-                    selected(
-                        'left',
-                        get_option('lease-boot-text-style-alignment', 'center')
-                    );
-                    ?>
-                                        >
+                    <option value="left"
+                        <?php
+                        selected(
+                            'left',
+                            get_option('lease-boot-text-style-alignment', 'center')
+                        );
+                        ?>
+                    >
                         <?php _e('Left', 'autive-lbb'); ?>
                     </option>
-                    <option value="center" 
-                    <?php
-                    selected(
-                        'center',
-                        get_option('lease-boot-text-style-alignment', 'center')
-                    );
-                    ?>
-                                            >
+                    <option value="center"
+                        <?php
+                        selected(
+                            'center',
+                            get_option('lease-boot-text-style-alignment', 'center')
+                        );
+                        ?>
+                    >
                         <?php _e('Center', 'autive-lbb'); ?>
                     </option>
-                    <option value="right" 
-                    <?php
-                    selected(
-                        'right',
-                        get_option('lease-boot-text-style-alignment', 'center')
-                    );
-                    ?>
-                                            >
+                    <option value="right"
+                        <?php
+                        selected(
+                            'right',
+                            get_option('lease-boot-text-style-alignment', 'center')
+                        );
+                        ?>
+                    >
                         <?php _e('Right', 'autive-lbb'); ?>
                     </option>
                 </select>
@@ -410,36 +429,36 @@ class Settings
             <th scope="row"><?php _e('Text color', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-text-style-color"
-                        value="<?php echo get_option('lease-boot-text-style-color', '#000000'); ?>"
-                        class="lease-boot-text-style-color" data-default-color="#000000"/>
+                       value="<?php echo get_option('lease-boot-text-style-color', '#000000'); ?>"
+                       class="lease-boot-text-style-color" data-default-color="#000000"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Text font size', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-text-style-font-size"
-                        value="<?php echo get_option('lease-boot-text-style-font-size', '1rem'); ?>"/>
+                       value="<?php echo get_option('lease-boot-text-style-font-size', '1rem'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Text font weight', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-text-style-font-weight"
-                        value="<?php echo get_option('lease-boot-text-style-font-weight', '400'); ?>"/>
+                       value="<?php echo get_option('lease-boot-text-style-font-weight', '400'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Text padding x', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-text-style-padding-x"
-                        value="<?php echo get_option('lease-boot-text-style-padding-x', '20px'); ?>"/>
+                       value="<?php echo get_option('lease-boot-text-style-padding-x', '20px'); ?>"/>
             </td>
         </tr>
         <tr>
             <th scope="row"><?php _e('Text padding y', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-text-style-padding-y"
-                        value="<?php echo get_option('lease-boot-text-style-padding-y', '10px'); ?>"/>
+                       value="<?php echo get_option('lease-boot-text-style-padding-y', '10px'); ?>"/>
             </td>
         </tr>
         <?php
@@ -454,14 +473,14 @@ class Settings
         <tr>
             <th scope="row"><?php _e('Activate dynamic pricing', 'autive-lbb'); ?></th>
             <td>
-                <input type="checkbox" name="lease-boot-dynamic-active" value="1" 
-                <?php
-                checked(
-                    1,
-                    get_option('lease-boot-dynamic-active', 0)
-                );
-                ?>
-                                                                                    />
+                <input type="checkbox" name="lease-boot-dynamic-active" value="1"
+                    <?php
+                    checked(
+                        1,
+                        get_option('lease-boot-dynamic-active', 0)
+                    );
+                    ?>
+                />
 
             </td>
         </tr>
@@ -469,27 +488,21 @@ class Settings
             <th scope="row"><?php _e('Container', 'autive-lbb'); ?></th>
             <td>
                 <input type="text" name="lease-boot-dynamic-container"
-                        value="<?php echo get_option('lease-boot-dynamic-container', ''); ?>"/>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <small>
-                <?php
-                _e(
-                    'Make sure to add a # or . in this field to be able to target either an id or class.',
-                    'autive-lbb'
-                )
-                ?>
-                        </small><br>
-                <small>
-                <?php
-                _e(
-                    'We assume you use Dutch currency format (1.000,00) and will strip any non numerical content.',
-                    'autive-lbb'
-                )
-                ?>
-                        </small><br>
+                       value="<?php echo get_option('lease-boot-dynamic-container', ''); ?>"/>
+                <p class="description">
+                    <?php
+                    _e(
+                        'Make sure to add a # or . in this field to be able to target either an id or class.',
+                        'autive-lbb'
+                    )
+                    ?><br>
+                    <?php
+                    _e(
+                        'We assume you use Dutch currency format (1.000,00) and will strip any non numerical content.',
+                        'autive-lbb'
+                    )
+                    ?>
+                </p>
 
             </td>
         </tr>
@@ -503,12 +516,12 @@ class Settings
             <th scope="row"><?php _e('Shortcode', 'autive-lbb'); ?></th>
             <td>
                 <p>
-                <?php
-                _e(
-                    'You can use the shortcode [lease-boot-button] to add the button to your website with the following attributes:',
-                    'autive-lbb'
-                )
-                ?>
+                    <?php
+                    _e(
+                        'You can use the shortcode [lease-boot-button] to add the button to your website with the following attributes:',
+                        'autive-lbb'
+                    )
+                    ?>
                 </p>
                 <p>
                 <ul>
@@ -520,20 +533,20 @@ class Settings
                 <p>
                     example: <br>
                     <code>[lease-boot-button price="
-                    <?php
-                    echo get_option(
-                        'lease-boot-general-example-price',
-                        '50000'
-                    );
-                    ?>
-                                                    " button_text="
-                                                    <?php
-                                                    echo get_option(
-                                                        'lease-boot-general-button-text',
-                                                        'Financier nu!'
-                                                    );
-                                                    ?>
-                    "
+                        <?php
+                        echo get_option(
+                            'lease-boot-general-example-price',
+                            '50000'
+                        );
+                        ?>
+                        " button_text="
+                        <?php
+                        echo get_option(
+                            'lease-boot-general-button-text',
+                            'Financier nu!'
+                        );
+                        ?>
+                        "
                         price_text="
                         <?php
                         echo get_option(
@@ -541,7 +554,7 @@ class Settings
                             'Financiering vanaf {price} per maand'
                         );
                         ?>
-                                    "]</code>
+                        "]</code>
                 </p>
             </td>
         </tr>
@@ -549,34 +562,49 @@ class Settings
             <th scope="row"><?php _e('PHP', 'autive-lbb'); ?></th>
             <td>
                 <p>
-                <?php
-                _e(
-                    'You can use the following PHP code to get an instance of the button:',
-                    'autive-lbb'
-                )
-                ?>
+                    <?php
+                    _e(
+                        'You can use the following PHP code to get an instance of the button:',
+                        'autive-lbb'
+                    )
+                    ?>
                 </p>
                 <p>
-                    <code>&lt;?php $button = new \Autive\LeaseBootButton\Button( $price, $text, $button_txt, $button_classes, $text_deactivate, $text_classes ); ?&gt;</code>
+                    <code>&lt;?php $button = new \Autive\LeaseBootButton\Button( $price, $text, $button_txt,
+                        $button_classes, $text_deactivate, $text_classes ); ?&gt;</code>
                 </p><br>
                 <p>
                     <?php _e('You can use the following attributes in order to change the button:', 'autive-lbb'); ?>
                 </p>
                 <p>
-                    <ul>
-                        <li><?php _e('$price (int) the total price of the object, mandatory.', 'autive-lbb'); ?></li>
-                        <li><?php _e('$text (string) the text of the price, optional.', 'autive-lbb'); ?></li>
-                        <li><?php _e('$button_txt (string) the text of the button, optional.', 'autive-lbb'); ?></li>
-                        <li><?php _e('$button_classes (string) the classes of the button, optional.', 'autive-lbb'); ?></li>
-                        <li><?php _e('$text_deactivate (bool) deactivate the text, optional.', 'autive-lbb'); ?></li>
-                        <li><?php _e('$text_classes (string) the classes of the text container, optional.', 'autive-lbb'); ?></li>
-                    </ul>
+                <ul>
+                    <li><?php _e('$price (int) the total price of the object, mandatory.', 'autive-lbb'); ?></li>
+                    <li><?php _e('$text (string) the text of the price, optional.', 'autive-lbb'); ?></li>
+                    <li><?php _e('$button_txt (string) the text of the button, optional.', 'autive-lbb'); ?></li>
+                    <li>
+                        <?php _e(
+                            '$button_classes (string) the classes of the button, optional.',
+                            'autive-lbb'
+                        ); ?>
+                    </li>
+                    <li><?php _e('$text_deactivate (bool) deactivate the text, optional.', 'autive-lbb'); ?></li>
+                    <li>
+                        <?php _e(
+                            '$text_classes (string) the classes of the text container, optional.',
+                            'autive-lbb'
+                        ); ?>
+                    </li>
+                </ul>
                 </p>
                 <p>
-                    <?php _e('You need to add variables in order, so if you only want to disable the text use the following.', 'autive-lbb'); ?>
+                    <?php _e(
+                        'You need to add variables in order, so if you only want to disable the text use the following.',
+                        'autive-lbb'
+                    ); ?>
                 </p>
                 <p>
-                    <code>&lt;?php $button = new \Autive\LeaseBootButton\Button( $price, null, null, null, true, null ); ?&gt;</code>
+                    <code>&lt;?php $button = new \Autive\LeaseBootButton\Button( $price, null, null, null, true, null );
+                        ?&gt;</code>
                 </p>
             </td>
         </tr>
@@ -585,12 +613,12 @@ class Settings
             <th scope="row"><?php _e('PHP - HTML', 'autive-lbb'); ?></th>
             <td>
                 <p>
-                <?php
-                _e(
-                    'Then you can use the following function to render the html:',
-                    'autive-lbb'
-                )
-                ?>
+                    <?php
+                    _e(
+                        'Then you can use the following function to render the html:',
+                        'autive-lbb'
+                    )
+                    ?>
                 </p>
                 <p>
                     <code>&lt;?php $button->html(); ?&gt;</code>
@@ -601,12 +629,12 @@ class Settings
             <th scope="row"><?php _e('PHP - price', 'autive-lbb'); ?></th>
             <td>
                 <p>
-                <?php
-                _e(
-                    'You can use the following PHP code to only get the monthly price:',
-                    'autive-lbb'
-                )
-                ?>
+                    <?php
+                    _e(
+                        'You can use the following PHP code to only get the monthly price:',
+                        'autive-lbb'
+                    )
+                    ?>
                 </p>
                 <p>
                     <code>&lt;?php $price = $button->get_price(); ?&gt;</code>
@@ -617,12 +645,12 @@ class Settings
             <th scope="row"><?php _e('PHP - url', 'autive-lbb'); ?></th>
             <td>
                 <p>
-                <?php
-                _e(
-                    'You can use the following PHP code to only get the url:',
-                    'autive-lbb'
-                )
-                ?>
+                    <?php
+                    _e(
+                        'You can use the following PHP code to only get the url:',
+                        'autive-lbb'
+                    )
+                    ?>
                 </p>
                 <p>
                     <code>&lt;?php $url = $button->get_url(); ?&gt;</code>

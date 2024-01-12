@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Lease Boot Button plugin\n"
-"POT-Creation-Date: 2023-11-09 21:40+0100\n"
+"POT-Creation-Date: 2023-11-22 20:14+0100\n"
 "PO-Revision-Date: 2023-11-09 21:40+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -28,161 +28,213 @@ msgid ""
 "make it work dynamically."
 msgstr ""
 
-#: src/Settings.php:69
+#: src/Plugin.php:66
+msgid "There is a new version of the Bootlease plugin."
+msgstr ""
+
+#: src/Plugin.php:69
+msgid ""
+"There is a new version available for the Bootlease plugin. Download the zip "
+"file, \n"
+"\t\t\t\t\t\t\tgo to the plugins page. Click on the button \"Add new\" and "
+"then on the button\n"
+"\t\t\t\t\t\t\t\"Upload plugin\". Select the downloaded zip file and click on "
+"the button \"Install now\". \n"
+"\t\t\t\t\t\t\tYou will be asked to replace the current plugin with the new "
+"version accept when all requirements are met.\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+
+#: src/Plugin.php:96
+msgid "You need to set an dealer tag."
+msgstr ""
+
+#: src/Plugin.php:99
+msgid ""
+"To make the user experience as fluent as possible you need to set an unique "
+"dealer tag for the Bootlease plugin.\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+
+#: src/Plugin.php:104
+msgid "Go to setting"
+msgstr ""
+
+#: src/Settings.php:65
 msgid "Leaseboot Button Settings"
 msgstr ""
 
-#: src/Settings.php:122
+#: src/Settings.php:117
 msgid "Here you can change the general settings."
 msgstr ""
 
-#: src/Settings.php:128
+#: src/Settings.php:124
+msgid "Dealer tag"
+msgstr ""
+
+#: src/Settings.php:132
+msgid ""
+"This tag is added to the form on leaseboot.com so we are able to see the "
+"request came from you. "
+msgstr ""
+
+#: src/Settings.php:138
+msgid ""
+"Make sure the tag is unique to your company, recognizable and does not "
+"contain any spaces."
+msgstr ""
+
+#: src/Settings.php:144
+msgid "Example: <strong>leaseboot-com</strong>"
+msgstr ""
+
+#: src/Settings.php:153
 msgid "Example background"
 msgstr ""
 
-#: src/Settings.php:136
+#: src/Settings.php:161
 msgid "Example price"
 msgstr ""
 
-#: src/Settings.php:143
+#: src/Settings.php:168
 msgid "Button text"
 msgstr ""
 
-#: src/Settings.php:150
+#: src/Settings.php:175
 msgid "Price text"
 msgstr ""
 
-#: src/Settings.php:168
+#: src/Settings.php:186
 msgid ""
 "You can use {price} for the monthly price and {amount} for the total cost of "
 "the boat."
 msgstr ""
 
-#: src/Settings.php:176
+#: src/Settings.php:194
 msgid "Deactivate plugin styling"
 msgstr ""
 
-#: src/Settings.php:193
+#: src/Settings.php:207
 msgid ""
 "If you decide to deactivate the button styling make sure your theme does add "
 "the correct styling."
 msgstr ""
 
-#: src/Settings.php:211
+#: src/Settings.php:224
 msgid "Here you can change the styling of the button."
 msgstr ""
 
-#: src/Settings.php:217
+#: src/Settings.php:230
 msgid "Button classes"
 msgstr ""
 
-#: src/Settings.php:224
+#: src/Settings.php:237
 msgid "Button alignment"
 msgstr ""
 
-#: src/Settings.php:235 src/Settings.php:387
+#: src/Settings.php:248 src/Settings.php:394
 msgid "Left"
 msgstr ""
 
-#: src/Settings.php:245 src/Settings.php:397
+#: src/Settings.php:258 src/Settings.php:404
 msgid "Center"
 msgstr ""
 
-#: src/Settings.php:255 src/Settings.php:407
+#: src/Settings.php:268 src/Settings.php:414
 msgid "Right"
 msgstr ""
 
-#: src/Settings.php:261
+#: src/Settings.php:274
 msgid "Button background color"
 msgstr ""
 
-#: src/Settings.php:269
+#: src/Settings.php:282
 msgid "Button font color"
 msgstr ""
 
-#: src/Settings.php:277
+#: src/Settings.php:290
 msgid "Button font size"
 msgstr ""
 
-#: src/Settings.php:284
+#: src/Settings.php:297
 msgid "Button font weight"
 msgstr ""
 
-#: src/Settings.php:291
+#: src/Settings.php:304
 msgid "Button border color"
 msgstr ""
 
-#: src/Settings.php:299
+#: src/Settings.php:312
 msgid "Button border thickness"
 msgstr ""
 
-#: src/Settings.php:306
+#: src/Settings.php:319
 msgid "Button border radius"
 msgstr ""
 
-#: src/Settings.php:313
+#: src/Settings.php:326
 msgid "Button padding x"
 msgstr ""
 
-#: src/Settings.php:320
+#: src/Settings.php:333
 msgid "Button padding y"
 msgstr ""
 
-#: src/Settings.php:337
+#: src/Settings.php:349
 msgid ""
 "Here you can change the styling of the text. If you decide to not activate "
 "the styling make sure your theme does style the text."
 msgstr ""
 
-#: src/Settings.php:343
+#: src/Settings.php:355
 msgid "Deactivate text"
 msgstr ""
 
-#: src/Settings.php:360
+#: src/Settings.php:368
 msgid "If you disable the text the monthly price is not shown anymore."
 msgstr ""
 
-#: src/Settings.php:369
+#: src/Settings.php:376
 msgid "Text classes"
 msgstr ""
 
-#: src/Settings.php:376
+#: src/Settings.php:383
 msgid "Text alignment"
 msgstr ""
 
-#: src/Settings.php:413
+#: src/Settings.php:420
 msgid "Text color"
 msgstr ""
 
-#: src/Settings.php:421
+#: src/Settings.php:428
 msgid "Text font size"
 msgstr ""
 
-#: src/Settings.php:428
+#: src/Settings.php:435
 msgid "Text font weight"
 msgstr ""
 
-#: src/Settings.php:435
+#: src/Settings.php:442
 msgid "Text padding x"
 msgstr ""
 
-#: src/Settings.php:442
+#: src/Settings.php:449
 msgid "Text padding y"
 msgstr ""
 
-#: src/Settings.php:456
+#: src/Settings.php:462
 msgid "Here you can change the dynamic settings."
 msgstr ""
 
-#: src/Settings.php:458
+#: src/Settings.php:464
 msgid "Activate dynamic pricing"
 msgstr ""
 
-#: src/Settings.php:472
+#: src/Settings.php:478
 msgid "Container"
 msgstr ""
 
-#: src/Settings.php:483
+#: src/Settings.php:485
 msgid ""
 "Make sure to add a # or . in this field to be able to target either an id or "
 "class."
@@ -194,33 +246,33 @@ msgid ""
 "numerical content."
 msgstr ""
 
-#: src/Settings.php:506
+#: src/Settings.php:505
 msgid "Shortcode"
 msgstr ""
 
-#: src/Settings.php:511
+#: src/Settings.php:510
 msgid ""
 "You can use the shortcode [lease-boot-button] to add the button to your "
 "website with the following attributes:"
 msgstr ""
 
-#: src/Settings.php:518
+#: src/Settings.php:517
 msgid "The price of the boat"
 msgstr ""
 
-#: src/Settings.php:519
+#: src/Settings.php:518
 msgid "The text of the button (optional)"
 msgstr ""
 
-#: src/Settings.php:520
+#: src/Settings.php:519
 msgid "The text of the price (optional)"
 msgstr ""
 
-#: src/Settings.php:552
+#: src/Settings.php:551
 msgid "PHP"
 msgstr ""
 
-#: src/Settings.php:557
+#: src/Settings.php:556
 msgid "You can use the following PHP code to get an instance of the button:"
 msgstr ""
 
@@ -244,85 +296,85 @@ msgstr ""
 msgid "$button_classes (string) the classes of the button, optional."
 msgstr ""
 
-#: src/Settings.php:574
+#: src/Settings.php:575
 msgid "$text_deactivate (bool) deactivate the text, optional."
 msgstr ""
 
-#: src/Settings.php:575
+#: src/Settings.php:576
 msgid "$text_classes (string) the classes of the text container, optional."
 msgstr ""
 
-#: src/Settings.php:579
+#: src/Settings.php:581
 msgid ""
 "You need to add variables in order, so if you only want to disable the text "
 "use the following."
 msgstr ""
 
-#: src/Settings.php:588
+#: src/Settings.php:592
 msgid "PHP - HTML"
 msgstr ""
 
-#: src/Settings.php:593
+#: src/Settings.php:597
 msgid "Then you can use the following function to render the html:"
 msgstr ""
 
-#: src/Settings.php:604
+#: src/Settings.php:608
 msgid "PHP - price"
 msgstr ""
 
-#: src/Settings.php:609
+#: src/Settings.php:613
 msgid "You can use the following PHP code to only get the monthly price:"
 msgstr ""
 
-#: src/Settings.php:620
+#: src/Settings.php:624
 msgid "PHP - url"
 msgstr ""
 
-#: src/Settings.php:625
+#: src/Settings.php:629
 msgid "You can use the following PHP code to only get the url:"
 msgstr ""
 
-#: src/Settings.php:636
+#: src/Settings.php:640
 msgid "Dynamic pricing"
 msgstr ""
 
-#: src/Settings.php:638
+#: src/Settings.php:642
 msgid "You can use AJAX to make the button dynamic:"
 msgstr ""
 
-#: src/Settings.php:640
+#: src/Settings.php:644
 msgid "To do this make sure to enable Dynamic pricing on the Dynamic tab,"
 msgstr ""
 
-#: src/Settings.php:644
+#: src/Settings.php:648
 msgid ""
 "This will add Javascript to your website which will listen to changes to the "
 "price inside the given container."
 msgstr ""
 
-#: src/Settings.php:651
+#: src/Settings.php:655
 msgid ""
 "When the price changes the button will be updated with the correct price, "
 "amount and url."
 msgstr ""
 
-#: src/Settings.php:678
+#: src/Settings.php:680
 msgid "General"
 msgstr ""
 
-#: src/Settings.php:679
+#: src/Settings.php:681
 msgid "Button styling"
 msgstr ""
 
-#: src/Settings.php:680
+#: src/Settings.php:682
 msgid "Text styling"
 msgstr ""
 
-#: src/Settings.php:681
+#: src/Settings.php:683
 msgid "Dynamic"
 msgstr ""
 
-#: src/Settings.php:682
+#: src/Settings.php:684
 msgid "How to"
 msgstr ""
 

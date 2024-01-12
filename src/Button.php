@@ -49,6 +49,11 @@ class Button
     public string $text_classes;
 
     /**
+     * @var string
+     */
+    private string $dealer_tag;
+
+    /**
      * Button constructor.
      *
      *
@@ -69,6 +74,7 @@ class Button
         string $text_classes = null,
     ) {
         $this->amount          = (int) $amount;
+        $this->dealer_tag      = get_option('lease-boot-general-dealer-tag', '');
         $this->text            = $text ?? get_option(
             'lease-boot-general-price-text',
             'Financiering vanaf {price} per maand'
@@ -88,7 +94,14 @@ class Button
      */
     public function get_url(): string
     {
-        return 'https://www.leaseboot.com/calculator/?amount=' . $this->amount;
+        $url = 'https://www.leaseboot.com/calculator/';
+        $params = [ 'amount' => $this->amount ];
+
+        if (! empty($this->dealer_tag)) {
+            $params['dealer'] = $this->dealer_tag;
+        }
+
+        return $url . '?' . http_build_query($params);
     }
 
     /**

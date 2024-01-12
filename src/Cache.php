@@ -5,13 +5,13 @@ namespace Autive\LeaseBootButton;
 class Cache
 {
     // The following options are hard coded and can be later on changed to be dynamic
-    public const PERCENTAGE = 8; // Percentage
+    public const PERCENTAGE = 9; // Percentage
     public const DURATION   = 180; // Months
     // End of hard coded options
 
     private string $version = '1';
 
-    private string $plugin_version = '1.0.0';
+    private string $plugin_version = '1.0.1';
 
     public static function get($option)
     {
@@ -29,6 +29,10 @@ class Cache
 
     public static function check(): void
     {
+        if (LEASE_BOOT_BUTTON_VERSION !== get_option('lease-boot-cache-plugin-version', '1.0.0')) {
+            self::purge();
+        }
+
         $current = time();
         $last    = get_option('lease-boot-cache-last-update', 0);
         $diff    = $current - $last;
@@ -40,12 +44,19 @@ class Cache
 
     public static function update(): void
     {
-		$json = @file_get_contents('https://bootfinancieringen.nl/wp-content/plugins/bootfinancieringen/leaseboot/info.json');
-		if ( $json ) {
-			$data = json_decode($json, true);
-			update_option('lease-boot-cache-last-update', time());
-			update_option('lease-boot-cache-version', $data['version'] ?? '1.0.0');
-			update_option('lease-boot-cache-plugin-version', $data['plugin-version'] ?? '1.0.0');
-		}
+        $json = @file_get_contents('https://bootfinancieringen.nl/wp-content/plugins/bootfinancieringen/leaseboot/info.json');
+        if ($json) {
+            $data = json_decode($json, true);
+            update_option('lease-boot-cache-last-update', time());
+            update_option('lease-boot-cache-version', $data['version'] ?? '1.0.0');
+            update_option('lease-boot-cache-plugin-version', $data['plugin-version'] ?? '1.0.0');
+        }
+    }
+
+    public static function purge(): void
+    {
+        delete_option('lease-boot-cache-last-update');
+        delete_option('lease-boot-cache-version');
+        delete_option('lease-boot-cache-plugin-version');
     }
 }
